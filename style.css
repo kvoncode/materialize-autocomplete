@@ -1,0 +1,13 @@
+.m1rem {
+  margin: 1rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  height: 100vh;
+}

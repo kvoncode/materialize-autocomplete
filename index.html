@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="root" class="flex">
+      <form class="flex" action="https://httpbin.org/post" method="post">
+        <div class="input-field m1rem">
+          <input
+            name="form"
+            type="text"
+            id="autocomplete-input"
+            class="autocomplete"
+          />
+          <label for="autocomplete-input">Type here</label>
+        </div>
+        <button
+          class="m1rem btn waves-effect waves-light"
+          type="submit"
+          name="action"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
