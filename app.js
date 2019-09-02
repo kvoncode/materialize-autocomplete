@@ -1,11 +1,7 @@
 $(document).ready(function() {
-
-  $.getJSON("countries.json", function (data) {
-      console.log("asd");
-    }
-  );
-      console.log("asd");
-
+  $.getJSON("countries.json", function(data) {
+    console.log("TCL: data", data);
+  });
 
   $("input.autocomplete").autocomplete({
     data: {
@@ -14,5 +10,4 @@ $(document).ready(function() {
       Google: "https://placehold.it/250x250"
     }
   });
-
 });
