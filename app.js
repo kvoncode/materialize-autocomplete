@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-  const url = "./countries.json"
+  const url =
+    "https://raw.githubusercontent.com/kvoncode/materialize-autocomplete/master/countries.json";
   $.getJSON(url).done(
     function (data) {
     console.log("TCL: data", data)
