@@ -1,7 +1,12 @@
 $(document).ready(function() {
-  $.getJSON("countries.json", function(data) {
-    console.log("TCL: data", data);
-  });
+
+  const url = "./countries.json"
+  $.getJSON(url).done(
+    function (data) {
+    console.log("TCL: data", data)
+      
+    }
+  );
 
   $("input.autocomplete").autocomplete({
     data: {
