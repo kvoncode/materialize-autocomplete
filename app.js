@@ -6,28 +6,27 @@ $(document).ready(function() {
   // }).always( () => {console.log("always")})
   // .fail( () => { console.log("fail")});
 
-  // $("input.autocomplete").autocomplete({
-  //   data: {
-  //     Apple: null,
-  //     Microsoft: null,
-  //     Google: "https://placehold.it/250x250"
-  //   }
-  // });
-
   const xhttp = new XMLHttpRequest();
 
   xhttp.onreadystatechange = function() {
-    console.log(
-      "TCL: xhttp.onreadystatechange -> this.readyState",
-      this.readyState
-    );
 
-    if(this.readyState == 4) {
-      this.status;
-      console.log("TCL: xhttp.onreadystatechange -> this.status", this.status)
+    if(this.readyState == 4 && this.status == 200) {
+      
+      const countries = JSON.parse(this.responseText);
+      // console.log("TCL: xhttp.onreadystatechange -> countries", countries)
 
-      this.responseText;
-      console.log("TCL: xhttp.onreadystatechange -> this.responseText", this.responseText)
+      const compatibleData = {};
+      
+      countries.forEach(element => {
+        compatibleData[ element["name"] ] = null
+      });
+      
+      console.log("TCL: xhttp.onreadystatechange -> compatibleData", compatibleData)
+      // bind data
+      $("input.autocomplete").autocomplete({
+        data: compatibleData
+      });
+
     }
   };
 
