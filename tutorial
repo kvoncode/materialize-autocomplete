@@ -1,0 +1,52 @@
+Welcome to the Materialize CSS  Autocomplete tutorial
+
+We already have some basic code. Let's go through it a little
+
+In index.html we have basic html form with Materialize CSS div and class "input-field", which connects label and input elements.
+
+Also materialize "Submit" button
+
+In head we connect materialize CSS file and in body at most bottom we connect first jquery, materialize and then our js file
+
+In app.js we have code sample from materialize home page
+
+First of all lets make our page responsible
+
+Then let's add our json file with countries
+
+After that lets make XMLHTTPRequest to get our json
+
+With the "new" operator we create new object from XMLHTTPRequest constructor
+
+The "new" operator in javascript do the following
+1. Creates blank object
+2. Connects new object to another object (prototype)
+3. Passes newly created object as "this" context
+4. Return "this" if the function does not return it's own object
+
+Now about XMLHTTPRequest 
+
+It's creating object that helps us communicate with server without fully refreshing our page
+
+"onreadystatechange" is a function that is executed every time the "readyState" property is changed
+
+The "readyState" is a number that represents current state of the XHR 
+
+The read-only "status" property is a HTTP "status code" of XHR response
+
+Inside onreadystatechange function, the "this" object is the XHR object that function belongs to. So we can check readyState and status through "this". Lets console log status and readyState
+
+The "responseText" property contains DOMString response from server. Let's console log it too
+
+We can see that our json is successfully received
+
+Now we can parse it using global "JSON" object
+
+JSON object contain 2 function. parse() and stringify(). parse used to create js object/array from json and stringify to create json string from js object/array. Let's console log parsed array
+
+Now we want change the data structure. We want object with country names as properties and null as values. We can use "forEach" function for arrays and console log compatible data
+
+Now let's create function to bind data, call it and check result
+
+Thats all, see you in the next video
+
